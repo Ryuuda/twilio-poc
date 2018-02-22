@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+    <body>
+    <div style="padding: 3em; color: white">
+        <h1>Please enter a room name:</h1>
+        <div class="p-md">
+            <input class="p-md" id="room-name" type="text" placeholder="Enter a room name"/>
+            <button class="p-md" onclick="updateUrl()">Generate Url</button>
+        </div>
+        <div class="p-md">
+            <a id="room" style="color: white" href=window.location.origin></a>
+            <script>
+				updateUrl = function () {
+					document.getElementById("room").innerHTML = window.location.origin + "/landing/" + document.getElementById("room-name").value;
+					document.getElementById("room").href = window.location.origin + "/landing/" + document.getElementById("room-name").value;
+				}
+            </script>
+        </div>
+    </div>
+    </body>
+</html>
+
+

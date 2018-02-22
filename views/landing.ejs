@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twilio Video</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div id="remote-media"></div>
+<div id="controls">
+  <div id="preview">
+    <p id="room" class="instructions"></p>
+    <script>
+		document.getElementById("room").innerHTML =
+			"Room: " + window.location.pathname.split('/')[2];
+    </script>
+    <div id="local-media"></div>
+    <button id="button-preview">Preview My Camera</button>
+  </div>
+  <div id="room-controls">
+    <button id="button-join">Join Room</button>
+    <button id="button-leave">Leave Room</button>
+  </div>
+  <div id="log"></div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
+<script src="/src/landingCtrl.js"></script>
+</body>
+</html>
